@@ -335,7 +335,7 @@ Does not continue past limit.
     (scala-font-lock:mark-reserved-symbols 2 font-lock-keyword-face)
 
     ;; 'Symbols
-    (,scala-syntax:symbolLiteral-re 1 font-lock-string-face)
+    (,scala-syntax:symbolLiteral-re 1 scala-font-lock:symbol-face)
 
     ;; underscore
     (scala-font-lock:mark-underscore 2 font-lock-keyword-face)
@@ -497,6 +497,14 @@ Does not continue past limit.
   :group 'scala)
 
 (defvar scala-font-lock:var-face 'scala-font-lock:var-face
+  "Face for scala variable names.")
+
+(defface scala-font-lock:symbol-face
+  '((t (:foreground "magenta")))
+  "Font Lock mode face used to highlight scala variable names."
+  :group 'scala)
+
+(defvar scala-font-lock:symbol-face 'scala-font-lock:symbol-face
   "Face for scala variable names.")
 
 
